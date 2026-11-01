@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <rect width="300" height="300" fill="#ffffff" rx="16"/>
+  <!-- Header QRIS -->
+  <text x="150" y="32" font-family="sans-serif" font-weight="900" font-size="16" fill="#7E22CE" text-anchor="middle">QRIS BANK MUAMALAT</text>
+  <text x="150" y="48" font-family="sans-serif" font-weight="600" font-size="10" fill="#64748B" text-anchor="middle">Risol UMKM Berkah</text>
+  
+  <!-- Stylized QR Grid -->
+  <g fill="#1E1B4B">
+    <!-- Top-Left Target -->
+    <rect x="35" y="65" width="60" height="60" rx="6" fill="#7E22CE"/>
+    <rect x="45" y="75" width="40" height="40" rx="3" fill="#ffffff"/>
+    <rect x="53" y="83" width="24" height="24" rx="2" fill="#7E22CE"/>
+
+    <!-- Top-Right Target -->
+    <rect x="205" y="65" width="60" height="60" rx="6" fill="#7E22CE"/>
+    <rect x="215" y="75" width="40" height="40" rx="3" fill="#ffffff"/>
+    <rect x="223" y="83" width="24" height="24" rx="2" fill="#7E22CE"/>
+
+    <!-- Bottom-Left Target -->
+    <rect x="35" y="195" width="60" height="60" rx="6" fill="#7E22CE"/>
+    <rect x="45" y="205" width="40" height="40" rx="3" fill="#ffffff"/>
+    <rect x="53" y="213" width="24" height="24" rx="2" fill="#7E22CE"/>
+
+    <!-- Data Blocks -->
+    <rect x="110" y="70" width="16" height="16" rx="2"/>
+    <rect x="140" y="70" width="24" height="12" rx="2"/>
+    <rect x="175" y="70" width="14" height="20" rx="2"/>
+    <rect x="105" y="95" width="24" height="14" rx="2"/>
+    <rect x="140" y="90" width="18" height="24" rx="2"/>
+    <rect x="170" y="100" width="18" height="14" rx="2"/>
+    <rect x="115" y="125" width="70" height="14" rx="2"/>
+
+    <rect x="40" y="140" width="20" height="14" rx="2"/>
+    <rect x="70" y="145" width="24" height="12" rx="2"/>
+    <rect x="40" y="165" width="45" height="14" rx="2"/>
+
+    <!-- Center Logo Shield -->
+    <rect x="120" y="148" width="60" height="30" rx="6" fill="#F59E0B"/>
+    <text x="150" y="168" font-family="sans-serif" font-weight="900" font-size="12" fill="#1C1209" text-anchor="middle">RISOL</text>
+
+    <!-- Bottom Data Blocks -->
+    <rect x="110" y="190" width="30" height="14" rx="2"/>
+    <rect x="150" y="190" width="40" height="14" rx="2"/>
+    <rect x="200" y="140" width="30" height="20" rx="2"/>
+    <rect x="240" y="145" width="24" height="35" rx="2"/>
+    <rect x="200" y="175" width="25" height="14" rx="2"/>
+    <rect x="110" y="215" width="20" height="35" rx="2"/>
+    <rect x="140" y="215" width="50" height="18" rx="2"/>
+    <rect x="140" y="240" width="25" height="18" rx="2"/>
+    <rect x="175" y="240" width="35" height="18" rx="2"/>
+    <rect x="200" y="200" width="30" height="18" rx="2"/>
+    <rect x="240" y="200" width="25" height="40" rx="2"/>
+    <rect x="215" y="230" width="18" height="24" rx="2"/>
+  </g>
+
+  <!-- Footer Info -->
+  <text x="150" y="284" font-family="sans-serif" font-weight="700" font-size="10" fill="#64748B" text-anchor="middle">NMID: ID102002102910</text>
+</svg>

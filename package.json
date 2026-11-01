@@ -1,0 +1,37 @@
+{
+  "name": "risolpos",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "migrate": "node scripts/migrate-prod.mjs",
+    "db:reset": "node scripts/reset-db.mjs",
+    "test:e2e": "node scripts/test-e2e.mjs",
+    "test:k6": "k6 run scripts/k6-load-test.js",
+    "test:k6:clean": "node scripts/clean-k6-data.mjs"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1156.0",
+    "@neon/config": "^1.9.3",
+    "@neondatabase/serverless": "^1.2.0",
+    "bcryptjs": "^3.0.3",
+    "lucide-react": "^1.61.0",
+    "next": "16.4.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.2",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@11.15.1"
+}
