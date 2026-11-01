@@ -1,10 +1,12 @@
-import { NextResponse } from 'next/server'
+import { NextResponse, connection } from 'next/server'
 import { sql } from '@/lib/db'
 
 export async function GET(request: Request) {
+  await connection()
+  const { searchParams } = new URL(request.url)
+  const outletId = searchParams.get('outletId') || 'outlet-1'
+
   try {
-    const { searchParams } = new URL(request.url)
-    const outletId = searchParams.get('outletId') || 'outlet-1'
 
     const products = await sql`
       SELECT 

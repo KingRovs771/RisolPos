@@ -1,10 +1,12 @@
-import { NextResponse } from 'next/server'
+import { NextResponse, connection } from 'next/server'
 import { sql } from '@/lib/db'
 
 export async function GET(request: Request) {
+  await connection()
+  const { searchParams } = new URL(request.url)
+  const date = searchParams.get('date')
+
   try {
-    const { searchParams } = new URL(request.url)
-    const date = searchParams.get('date')
 
     let expenses
     if (date) {

@@ -1,15 +1,17 @@
-import { NextResponse } from 'next/server'
+import { NextResponse, connection } from 'next/server'
 import { sql } from '@/lib/db'
 
 export async function GET(request: Request) {
+  await connection()
+  const { searchParams } = new URL(request.url)
+  const startDate =
+    searchParams.get('startDate') ||
+    searchParams.get('start') ||
+    new Date().toISOString().split('T')[0]
+  const endDate = searchParams.get('endDate') || searchParams.get('end') || startDate
+  const outletIdParam = searchParams.get('outletId') || 'ALL'
+
   try {
-    const { searchParams } = new URL(request.url)
-    const startDate =
-      searchParams.get('startDate') ||
-      searchParams.get('start') ||
-      new Date().toISOString().split('T')[0]
-    const endDate = searchParams.get('endDate') || searchParams.get('end') || startDate
-    const outletIdParam = searchParams.get('outletId') || 'ALL'
 
     const startTimestamp = `${startDate}T00:00:00+07:00`
     const endTimestamp = `${endDate}T23:59:59+07:00`
