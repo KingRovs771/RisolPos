@@ -1,7 +1,8 @@
-import { NextResponse } from 'next/server'
+import { NextResponse, connection } from 'next/server'
 import { sql } from '@/lib/db'
 
 export async function GET() {
+  await connection()
   try {
     const users = await sql`
       SELECT u.id, u.username, u.name, u.role, u.outlet_id, o.name AS outlet_name

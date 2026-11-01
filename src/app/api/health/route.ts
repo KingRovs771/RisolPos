@@ -1,8 +1,9 @@
-import { NextResponse } from 'next/server'
+import { NextResponse, connection } from 'next/server'
 import { sql } from '@/lib/db'
 import { isStorageConfigured } from '@/lib/storage'
 
 export async function GET() {
+  await connection()
   try {
     const result = await sql`SELECT 1 as connected, NOW() as current_time`
     return NextResponse.json({

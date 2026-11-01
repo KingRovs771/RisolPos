@@ -1,7 +1,8 @@
-import { NextResponse } from 'next/server'
+import { NextResponse, connection } from 'next/server'
 import { sql } from '@/lib/db'
 
 export async function GET() {
+  await connection()
   try {
     const outlets = await sql`
       SELECT 

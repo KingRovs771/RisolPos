@@ -53,7 +53,7 @@ export function setup() {
     if (body && body.data && body.data.id) {
       outletId = body.data.id
     }
-  } catch (_) {
+  } catch {
     // fallback
   }
 
@@ -79,7 +79,7 @@ export function setup() {
     if (body && body.data && body.data.id) {
       productId = Number(body.data.id)
     }
-  } catch (_) {
+  } catch {
     // fallback
   }
 
@@ -103,7 +103,7 @@ export function setup() {
     if (body && body.data && body.data.id) {
       cashierId = body.data.id
     }
-  } catch (_) {
+  } catch {
     // fallback
   }
 
@@ -121,7 +121,7 @@ export function setup() {
   }
 }
 
-export default function (data) {
+export default function runLoadTest(data) {
   const today = new Date().toISOString().split('T')[0]
 
   // 1. Cek Katalog POS Per Outlet
@@ -133,7 +133,7 @@ export default function (data) {
         try {
           const b = JSON.parse(r.body)
           return b.success === true && Array.isArray(b.data)
-        } catch (_) {
+        } catch {
           return false
         }
       },
@@ -178,7 +178,7 @@ export default function (data) {
         try {
           const b = JSON.parse(r.body)
           return b.success === true && Boolean(b.data && b.data.id)
-        } catch (_) {
+        } catch {
           return false
         }
       },
@@ -212,7 +212,7 @@ export default function (data) {
           try {
             const b = JSON.parse(r.body)
             return b.success === true && typeof b.data.stock_after === 'number'
-          } catch (_) {
+          } catch {
             return false
           }
         },
@@ -250,7 +250,7 @@ export default function (data) {
             typeof targetAudit.currentStock === 'number' &&
             typeof targetAudit.outSale === 'number'
           )
-        } catch (_) {
+        } catch {
           return false
         }
       },
